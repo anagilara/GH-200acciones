@@ -5,6 +5,12 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Nivel de detalle de la ejecución'
+        required: false
+        default: 'info'
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -19,3 +25,5 @@ jobs:
         run: npm install
       - name: Ejecutar pruebas
         run: npm test
+      - name: Mostrar parámetros
+        run: echo "Nivel seleccionado: ${{ inputs.logLevel }}"
