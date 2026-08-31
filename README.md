@@ -1,4 +1,4 @@
-# GH-200acciones
+# GH-200 acciones
 
 Aplicacion web de administracion de usuarios en Node.js.
 
