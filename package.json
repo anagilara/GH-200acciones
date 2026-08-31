@@ -1,0 +1,18 @@
+{
+  "name": "gh-200acciones-user-admin",
+  "version": "1.0.0",
+  "description": "Aplicación de administración de usuarios en Node.js",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "nodejs",
+    "usuarios",
+    "administracion"
+  ],
+  "author": "",
+  "license": "MIT"
+}

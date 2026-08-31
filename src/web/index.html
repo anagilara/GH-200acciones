@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administracion de Usuarios</title>
+  <link rel="stylesheet" href="/web/styles.css">
+</head>
+<body>
+  <div class="bg-shape bg-shape-a"></div>
+  <div class="bg-shape bg-shape-b"></div>
+
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">Panel Web</p>
+      <h1>Administracion de Usuarios</h1>
+      <p class="subtitle">Crea, consulta y elimina clientes con su antiguedad calculada automaticamente.</p>
+    </header>
+
+    <section class="card">
+      <h2>Nuevo usuario</h2>
+      <form id="user-form" class="form-grid">
+        <label>
+          Nombre
+          <input type="text" name="name" required placeholder="Ej. Ana Torres">
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required placeholder="ana@correo.com">
+        </label>
+        <label>
+          Cliente desde
+          <input type="date" name="clientSince" required>
+        </label>
+        <button type="submit">Guardar usuario</button>
+      </form>
+      <p id="form-message" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <div class="list-header">
+        <h2>Usuarios</h2>
+        <button id="refresh-btn" type="button">Actualizar</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Cliente desde</th>
+              <th>Antiguedad</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="users-body"></tbody>
+        </table>
+      </div>
+      <p id="list-message" class="message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="/web/app.js" defer></script>
+</body>
+</html>
