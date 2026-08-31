@@ -55,10 +55,9 @@ jobs:
       
       - name: Mostrar parámetros
         run: 'echo "Nivel seleccionado: ${{ inputs.logLevel }}"'
-
-      - uses: actions/checkout@v2
+      
       - name: Cache NPM dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ~/.npm
           key: ${{ runner.os }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
