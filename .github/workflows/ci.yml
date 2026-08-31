@@ -13,7 +13,11 @@ on:
 
 jobs:
   test:
+    strategy:
+      matrix:
+        node-version: [20.x, 22.x]
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,7 +27,17 @@ jobs:
           node-version: '20'
       - name: Instalar dependencias
         run: npm install
-      - name: Ejecutar pruebas
-        run: npm test
+      - name: Ejecutar pruebas y guardar evidencia
+        shell: bash
+        run: |
+          set -o pipefail
+          npm test | tee test-results.txt
+      - name: Publicar evidencia
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-${{ matrix.node-version }}
+          path: test-results.txt
+      
       - name: Mostrar parámetros
         run: 'echo "Nivel seleccionado: ${{ inputs.logLevel }}"'
