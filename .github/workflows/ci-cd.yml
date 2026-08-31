@@ -64,6 +64,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-npm-cache-
 
+      - name: Ver contenido de la caché
+        run: |
+          ls -la ~/.npm
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
