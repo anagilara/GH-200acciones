@@ -17,7 +17,7 @@ on:
 
 jobs:
   selfhosted:
-    if: github.ref == 'refs/heads/developer'
+    if: github.ref == 'refs/heads/main'
     runs-on: self-hosted
     steps:
       - name: Hola
