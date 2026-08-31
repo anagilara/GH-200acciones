@@ -1,8 +1,11 @@
 {
-  "name": "customer-tenure",
+  "name": "@anagilara/customer-tenure",
   "version": "1.0.0",
   "description": "Paquete para calcular la antigüedad de un cliente",
   "main": "index.js",
   "type": "commonjs",
   "license": "MIT"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
