@@ -18,6 +18,11 @@ on:
     types: [run-tests]
 
 jobs:
+  selfhosted:
+    runs-on: self-hosted
+    steps:
+      - name: Hola
+        run: 'echo "Hola mundo desde self-hoste runner"'
   test:
     strategy:
       matrix:
