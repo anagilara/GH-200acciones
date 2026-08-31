@@ -26,4 +26,4 @@ jobs:
       - name: Ejecutar pruebas
         run: npm test
       - name: Mostrar parámetros
-        run: echo "Nivel seleccionado: ${{ inputs.logLevel }}"
+        run: echo "Nivel seleccionado:"
