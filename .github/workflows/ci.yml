@@ -4,12 +4,16 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+    types: [opened]
+  page_build: 
   workflow_dispatch:
     inputs:
       logLevel:
         description: 'Nivel de detalle de la ejecución'
         required: false
         default: 'info'
+  schedule:
+    - cron: '*/5 * * * *'
 
 jobs:
   test:
