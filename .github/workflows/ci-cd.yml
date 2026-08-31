@@ -3,6 +3,7 @@ name: CI-CD
 on:
   push:
     branches: [main]
+    paths: 'src/'
   pull_request:
     branches: [main]
     types: [opened]
