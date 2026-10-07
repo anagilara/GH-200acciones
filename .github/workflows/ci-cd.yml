@@ -7,8 +7,7 @@ on:
   pull_request:
     branches: [main]
     types: [opened]
-  schedule:
-    - cron: '0 5 * * SUN'
+ 
   page_build: 
   workflow_dispatch:
     inputs:
